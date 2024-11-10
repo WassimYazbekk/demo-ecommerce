@@ -1,0 +1,8 @@
+.carousel-item img {
+  aspect-ratio: 16 / 9;
+}
+
+.cat-link {
+  margin-right: 1.75rem;
+  font-size: 1.2rem;
+}
