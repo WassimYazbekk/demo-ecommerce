@@ -57,11 +57,41 @@
                 Search
               </button>
             </form>
-            <a class="btn btn-primary" href="signin.html">Signin</a>
+            <div class="d-flex align-items-center justify-content-between">
+              <a class="btn btn-primary me-2" href="signin.html">Signin</a>
+              <button class="btn btn-secondary" onclick="toggleCart()">
+                Cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Cart section -->
+    <aside
+      id="cart-container"
+      class="container"
+      style="
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 512px;
+        background-color: rgb(200, 200, 200);
+        right: 0;
+        top: 0;
+        z-index: 999;
+        padding: 1rem;
+      "
+    >
+      <div class="d-flex align-items-center justify-content-between">
+        <h3>Shopping Cart</h3>
+        <button class="btn btn-danger" onclick="toggleCart()">X</button>
+      </div>
+      <!-- Cart items will be displayed here -->
+      <div id="cart-items"></div>
+    </aside>
 
     <!-- carousel -->
     <div
@@ -164,7 +194,12 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -185,7 +220,12 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -206,7 +246,12 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -227,7 +272,12 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -367,5 +417,7 @@
     >
       <h3 class="text-white">&copy;Tech-shop 2024</h3>
     </footer>
+
+    <script src="assets/js/index.js" defer></script>
   </body>
 </html>

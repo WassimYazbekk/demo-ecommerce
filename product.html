@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tech-shop | product</title>
-    <link href="css/style.css" rel="stylesheet" />
 
+    <link href="assets/css/index.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -38,7 +38,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="products.html">Products</a>
@@ -56,11 +58,41 @@
                 Search
               </button>
             </form>
-            <a class="btn btn-primary" href="signin.html">Signin</a>
+            <div class="d-flex align-items-center justify-content-between">
+              <a class="btn btn-primary me-2" href="signin.html">Signin</a>
+              <button class="btn btn-secondary" onclick="toggleCart()">
+                Cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Cart section -->
+    <aside
+      id="cart-container"
+      class="container"
+      style="
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 512px;
+        background-color: rgb(200, 200, 200);
+        right: 0;
+        top: 0;
+        z-index: 999;
+        padding: 1rem;
+      "
+    >
+      <div class="d-flex align-items-center justify-content-between">
+        <h3>Shopping Cart</h3>
+        <button class="btn btn-danger" onclick="toggleCart()">X</button>
+      </div>
+      <!-- Cart items will be displayed here -->
+      <div id="cart-items"></div>
+    </aside>
 
     <main class="container my-5">
       <div class="row">
@@ -105,7 +137,9 @@
             similique sint saepe nesciunt eum amet!
           </p>
           <h2 class="text-primary">$99.99</h2>
-          <button class="btn btn-success btn-lg mb-3">Add to Cart</button>
+          <button
+                  onclick="addToCart('AirPods Pro', 249)"
+            class="btn btn-success btn-lg mb-3">Add to Cart</button>
           <p>Additional Details:</p>
           <ul>
             <li>Detail 1 similique sint saepe nesciunt eum amet!</li>
@@ -239,7 +273,8 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button onclick="addToCart('AirPods Pro', 249)" class="btn btn-primary">Add to Cart</button>
+                  
               </div>
             </div>
           </div>
@@ -253,5 +288,8 @@
     >
       <h3 class="text-white">&copy;Tech-shop 2024</h3>
     </footer>
+
+    
+    <script src="assets/js/index.js" defer></script>
   </body>
 </html>
