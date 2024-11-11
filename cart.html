@@ -66,25 +66,50 @@
         <h1>Cart</h1>
       </div>
 
-      <!-- Cart section -->
-      <div
-        id="cart-container"
-        class="container"
-        style="max-width: 512px; right: 0; top: 0; z-index: 999; padding: 1rem"
-      >
-        <!-- Cart items will be displayed here -->
-        <div id="cart-items"></div>
+      <table class="table table-striped border">
+        <tr>
+          <th>name</th>
+          <th>price</th>
+          <th>quantity</th>
+          <th>subtotal</th>
+          <th>actions</th>
+        </tr>
+
+        <tr>
+          <td>airpods</td>
+          <td>120$</td>
+          <td>2</td>
+          <td>240$</td>
+          <td class="d-flex" style="align-self: center; justify-content: start;">
+            <button class="btn btn-primary" style="margin-right: 1rem; width: 2rem; height: 2rem; padding: 0;">-</button>
+            <button class="btn btn-primary" style="width: 2rem; height: 2rem; padding: 0;">+</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>iphone</td>
+          <td>1200$</td>
+          <td>1</td>
+          <td>1200$</td>
+          <td class="d-flex" style="align-self: center; justify-content: start;">
+            <button class="btn btn-primary" style="margin-right: 1rem; width: 2rem; height: 2rem; padding: 0;">-</button>
+            <button class="btn btn-primary" style="width: 2rem; height: 2rem; padding: 0;">+</button>
+          </td>
+        </tr>
+        
+      </table>
+
+      <div class="d-flex w-100 justify-content-end">
+        <button class="btn btn-success">Checkout</button>
+
       </div>
-    </main>
 
     <!-- footer -->
     <footer
       class="d-flex align-items-center justify-content-center bg-secondary p-2 mt-1"
-      style="position: fixed; bottom: 0; width: 100vw"
+      style="position: fixed; bottom: 0; left: 0; width: 100vw"
     >
       <h3 class="text-white">&copy;Tech-shop 2024</h3>
     </footer>
-
-    <script src="assets/js/index.js" defer></script>
   </body>
 </html>
