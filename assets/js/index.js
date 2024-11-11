@@ -11,12 +11,6 @@ function loadCartFromSession() {
   return savedCart ? JSON.parse(savedCart) : [];
 }
 
-function toggleCart() {
-  const cartContainer = document.getElementById("cart-container");
-  cartContainer.style.display =
-    cartContainer.style.display === "none" ? "block" : "none";
-}
-
 function addToCart(productName, price) {
   const existingProduct = cart.find((item) => item.name === productName);
   if (existingProduct) {
