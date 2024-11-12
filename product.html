@@ -38,9 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="products.html">Products</a>
@@ -60,49 +58,21 @@
             </form>
             <div class="d-flex align-items-center justify-content-between">
               <a class="btn btn-primary me-2" href="signin.html">Signin</a>
-              <a href="cart.html" class="btn btn-secondary">
-                Cart
-              </a>
+              <a href="cart.html" class="btn btn-secondary"> Cart </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Cart section -->
-    <aside
-      id="cart-container"
-      class="container"
-      style="
-        display: none;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        max-width: 512px;
-        background-color: rgb(200, 200, 200);
-        right: 0;
-        top: 0;
-        z-index: 999;
-        padding: 1rem;
-      "
-    >
-      <div class="d-flex align-items-center justify-content-between">
-        <h3>Shopping Cart</h3>
-        <button class="btn btn-danger" onclick="toggleCart()">X</button>
-      </div>
-      <!-- Cart items will be displayed here -->
-      <div id="cart-items"></div>
-    </aside>
-
     <main class="container my-5">
       <div class="row">
-        <!-- Left side: Product images -->
         <div class="col-md-6">
-          <div class="product-image-main">
+          <div class="product-img-main">
             <img
-              src="assets/images/airpods.jpeg"
+              src="https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-14-Purple-frontimage"
               alt="Main Product Image"
-              class="img-fluid mb-3 w-100"
+              class="img-fluid mb-3 h-100"
             />
           </div>
           <div class="product-thumbnails d-flex justify-content-between">
@@ -137,9 +107,18 @@
             similique sint saepe nesciunt eum amet!
           </p>
           <h2 class="text-primary">$99.99</h2>
-          <button
-                  onclick="addToCart('AirPods Pro', 249)"
-            class="btn btn-success btn-lg mb-3">Add to Cart</button>
+          <form action="">
+            <label class="form-label" for="quantity">Quantity</label>
+            <input
+              class="form-control w-50"
+              type="number"
+              name="quantity"
+              value="1"
+              required
+              min="1"
+            />
+            <button class="btn btn-success btn-lg my-3">Add to Cart</button>
+          </form>
           <p>Additional Details:</p>
           <ul>
             <li>Detail 1 similique sint saepe nesciunt eum amet!</li>
@@ -153,13 +132,11 @@
     <section class="container mt-4">
       <h1>Similiar Products</h1>
       <div class="row">
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-lg-3 mb-4">
           <div class="card">
-            <img
-              src="assets/images/airpods.jpeg"
-              class="card-img-top"
-              alt="AirPods Pro"
-            />
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
             <div class="card-body">
               <h5 class="card-title">AirPods Pro</h5>
               <p class="card-text">
@@ -168,19 +145,22 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-lg-3 mb-4">
           <div class="card">
-            <img
-              src="assets/images/airpods.jpeg"
-              class="card-img-top"
-              alt="AirPods Pro"
-            />
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
             <div class="card-body">
               <h5 class="card-title">AirPods Pro</h5>
               <p class="card-text">
@@ -189,19 +169,21 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-lg-3 mb-4">
           <div class="card">
-            <img
-              src="assets/images/airpods.jpeg"
-              class="card-img-top"
-              alt="AirPods Pro"
-            />
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
             <div class="card-body">
               <h5 class="card-title">AirPods Pro</h5>
               <p class="card-text">
@@ -210,19 +192,21 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-lg-3 mb-4">
           <div class="card">
-            <img
-              src="assets/images/airpods.jpeg"
-              class="card-img-top"
-              alt="AirPods Pro"
-            />
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
             <div class="card-body">
               <h5 class="card-title">AirPods Pro</h5>
               <p class="card-text">
@@ -231,19 +215,21 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-lg-3 mb-4">
           <div class="card">
-            <img
-              src="assets/images/airpods.jpeg"
-              class="card-img-top"
-              alt="AirPods Pro"
-            />
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
             <div class="card-body">
               <h5 class="card-title">AirPods Pro</h5>
               <p class="card-text">
@@ -252,19 +238,21 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-lg-3 mb-4">
           <div class="card">
-            <img
-              src="assets/images/airpods.jpeg"
-              class="card-img-top"
-              alt="AirPods Pro"
-            />
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
             <div class="card-body">
               <h5 class="card-title">AirPods Pro</h5>
               <p class="card-text">
@@ -273,13 +261,63 @@
               <p class="card-text font-weight-bold">$249</p>
               <div class="d-flex justify-content-between">
                 <a class="btn btn-primary" href="product.html">View</a>
-                <button onclick="addToCart('AirPods Pro', 249)" class="btn btn-primary">Add to Cart</button>
-                  
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
         </div>
-
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">AirPods Pro</h5>
+              <p class="card-text">
+                Noise-canceling earbuds with immersive sound.
+              </p>
+              <p class="card-text font-weight-bold">$249</p>
+              <div class="d-flex justify-content-between">
+                <a class="btn btn-primary" href="product.html">View</a>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card">
+            <div class="card-img-top">
+              <img src="assets/images/airpods.jpeg" alt="AirPods Pro" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">AirPods Pro</h5>
+              <p class="card-text">
+                Noise-canceling earbuds with immersive sound.
+              </p>
+              <p class="card-text font-weight-bold">$249</p>
+              <div class="d-flex justify-content-between">
+                <a class="btn btn-primary" href="product.html">View</a>
+                <button
+                  onclick="addToCart('AirPods Pro', 249)"
+                  class="btn btn-primary"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- footer -->
